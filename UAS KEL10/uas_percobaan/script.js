@@ -1,30 +1,57 @@
 
-// Bagian Product Js dari index.html
 
-    // Get the product grid and buttons
+// Bagian Product Js dari index.html
+document.addEventListener('DOMContentLoaded', function () {
     const productGrid = document.getElementById('productGrid');
     const scrollLeftButton = document.getElementById('scrollLeft');
     const scrollRightButton = document.getElementById('scrollRight');
-    
-    // Scroll by a set amount (you can adjust this value)
-    const scrollAmount = 300;
-    
-    // Function to scroll left
-    scrollLeftButton.addEventListener('click', () => {
+  
+    // Fungsi scroll ke kiri
+    scrollLeftButton.addEventListener('click', function () {
       productGrid.scrollBy({
-          left: -scrollAmount,
-          behavior: 'smooth'
+        left: -350, // Scroll ke kiri sejauh 350px
+        behavior: 'smooth', // Animasi smooth
       });
     });
-    
-    // Function to scroll right
-    scrollRightButton.addEventListener('click', () => {
+  
+    // Fungsi scroll ke kanan
+    scrollRightButton.addEventListener('click', function () {
       productGrid.scrollBy({
-          left: scrollAmount,
-          behavior: 'smooth'
+        left: 350, // Scroll ke kanan sejauh 350px
+        behavior: 'smooth', // Animasi smooth
       });
     });
-    
+
+  });
+
+  // blog
+document.addEventListener('DOMContentLoaded', function () {
+    const blogGrid = document.getElementById('blogGrid');
+    const scrollLeftButton1 = document.getElementById('scrollLeft1');
+    const scrollRightButton1 = document.getElementById('scrollRight1');
+  
+    // Fungsi scroll ke kiri
+    scrollLeftButton1.addEventListener('click', function () {
+     blogGrid.scrollBy({
+        left: -350, // Scroll ke kiri sejauh 350px
+        behavior: 'smooth', // Animasi smooth
+      });
+    });
+  
+    // Fungsi scroll ke kanan
+    scrollRightButton1.addEventListener('click', function () {
+      blogGrid.scrollBy({
+        left: 350, // Scroll ke kanan sejauh 350px
+        behavior: 'smooth', // Animasi smooth
+      });
+    });
+
+  });
+
+
+
+
+
     
     
     // Function to show product modal
@@ -105,15 +132,16 @@ function sendToWhatsapp(){
 	let email = document.getElementById('email').value;
 	let message = document.getElementById('message').value;
 
-
+    
 	var url = "https://wa.me/" + number + "?text="
 	+ "Name : " +name+ "%0a"
 	+ "Email : " +email+ "%0a"
 	+ "Message : " +message+ "%0a%0a";
-
-
+    
+    
 	window.open(url, '_blank').focus();
 }
+
 
 
 

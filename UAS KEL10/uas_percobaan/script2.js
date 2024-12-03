@@ -8,7 +8,7 @@ document.getElementById('cekResiForm').addEventListener('submit', async function
     document.getElementById('statusModal').classList.add('hidden');
 
     // API URL
-    const apiUrl = `https://api.binderbyte.com/v1/track?api_key=4604455054b4cfc30a1c3d1410d672c870c37fd073c46c2de50094423d89494a&courier=${courier}&awb=${resi}`;
+    const apiUrl = `https://api.binderbyte.com/v1/track?api_key=73080dd3f177f53cb76799995ebb9ac030296212c074256af272c0d68a7cd28d&courier=${courier}&awb=${resi}`;
 
     try {
         // Fetch API response
